@@ -5,7 +5,7 @@ permalink: /
 subtitle: sunnykimhappy@kaist.ac.kr
 
 profile:
-  align: left
+  align: right
   image: me.jpg
   image_circular: True # crops the image to make it circular
   more_info: 
