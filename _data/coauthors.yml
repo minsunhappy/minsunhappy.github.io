@@ -32,3 +32,8 @@
 "planck":
   - firstname: ["Max"]
     url: https://en.wikipedia.org/wiki/Max_Planck
+
+
+"minsun":
+  - firstname: ["Minsun", "M."]
+    url: https://minsunhappy.github.io/
