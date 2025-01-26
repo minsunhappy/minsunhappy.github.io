@@ -6,7 +6,7 @@ subtitle: sunnykimhappy@kaist.ac.kr
 
 profile:
   align: right
-  image: me.jpg
+  image: yoda.png
   image_circular: True # crops the image to make it circular
   more_info: 
 
