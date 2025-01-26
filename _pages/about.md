@@ -19,8 +19,10 @@ I am a second-year master’s student at [KAIST Graduate School of Culture Techn
 
 **🌟 My Vision**
 
-I believe everyone has a story worth sharing, and my goal is to help **manifest those stories into reality**—whether through text, video, 3D, or other forms. My current focus is on making **video creation accessible to everyone** leveraging Computer Vision, Conputer Graphics and HCI technologies.
+I believe everyone has a story worth sharing, and my goal is to help **manifest those stories into reality**—whether through text, video, 3D, or any other medium. My current focus is on **making video creation accessible to everyone**, leveraging breakthroughs in Computer Vision, Computer Graphics, and HCI. By blending technology with creativity, I strive to empower people to transform their unique ideas into powerful, shareable experiences.
 
 **📚 Research Interests**
 - Automating video editing and cut generation
 - Video generation using AI models
+
+

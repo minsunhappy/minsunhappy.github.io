@@ -19,6 +19,8 @@ strong {
   color: var(--global-text-color);
 }
 
+
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -730,6 +732,7 @@ footer.sticky-bottom {
       margin-bottom: 1rem;
 
       .preview {
+        max-width: 100%;
       }
 
       .abbr {
