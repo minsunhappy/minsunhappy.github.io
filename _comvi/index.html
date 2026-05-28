@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="(CHI'26) ComVi: Context-Aware Optimized Comment Display in Video Playback">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComVi: Context-Aware Optimized Comment Display in Video Playback</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .publication-title {
+      font-family: 'Google Sans', sans-serif;
+    }
+    .publication-authors {
+      font-family: 'Google Sans', sans-serif;
+    }
+    .publication-authors a {
+      color: hsl(204, 86%, 53%) !important;
+    }
+    .publication-authors a:hover {
+      text-decoration: underline;
+    }
+    .publication-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .publication-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .link-block .button {
+      margin-bottom: 8px;
+    }
+    .teaser-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .result-img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+    .columns iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
+    }
+    .video-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #f0f0f0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 1.1rem;
+      border: 2px dashed #ccc;
+    }
+    footer a {
+      color: hsl(204, 86%, 53%);
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- Hero / Title -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span style="white-space: nowrap;">ComVi: Context-Aware Optimized Comment Display</span><br>in Video Playback</h1>
+
+          <!-- Authors -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://minsunhappy.github.io/">Minsun Kim</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://w-dlee.github.io/">Dawon Lee</a><sup>2</sup>*,</span>
+            <span class="author-block">
+              <a href="https://vml.kaist.ac.kr/main/people/person/1">Junyong Noh</a><sup>1</sup>* (*Co-corresponding authors)
+            </span>
+          </div>
+
+          <!-- Affiliation -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>KAIST &nbsp;&nbsp; <sup>2</sup>Kookmin University</span>
+          </div>
+
+          <h1 style="font-size:23px;font-weight:bold">CHI 2026</h1>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="https://vml.kaist.ac.kr/assets/Contents/Publications/International/2026MinsunKim_CHI/2026MinsunKim_CHI.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (PDF)</span>
+                </a>
+              </span>
+
+              <!-- DOI Link -->
+              <span class="link-block">
+                <a href="https://doi.org/10.1145/3772318.3791018"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon"><i class="fas fa-link"></i></span>
+                  <span>ACM DOI (To Appear)</span>
+                </a>
+              </span>
+
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <img src="./images/teaser_comvi.jpg" class="teaser-img" alt="ComVi Teaser">
+        <p class="mt-3">
+          Overview of ComVi. Given a video and its comments (Input), ComVi first maps each comment to semantically relevant
+          timestamps by computing audio-visual correlations. It then selects an optimal comment sequence by balancing temporal
+          semantic relevance, popularity, and adequate display durations. Finally, the selected comments are presented on the video
+          frame at their corresponding timestamps during playback (Output).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            On general video-sharing platforms like YouTube, comments are displayed independently of video playback.
+            As viewers often read comments while watching a video, they may encounter ones referring to moments
+            unrelated to the current scene, which can reveal spoilers and disrupt immersion. To address this problem,
+            we present ComVi, a novel system that displays comments at contextually relevant moments, enabling
+            viewers to see time-synchronized comments and video content together. We first map all comments to relevant
+            video timestamps by computing audio-visual correlation, then construct the comment sequence through an
+            optimization that considers temporal relevance, popularity (number of likes), and display duration for
+            comfortable reading. In a user study, ComVi provided a significantly more engaging experience than
+            conventional video interfaces (i.e., YouTube and Danmaku), with 71.9% of participants selecting ComVi
+            as their most preferred interface.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</section>
+
+
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <!-- Result 1: Comment Display Examples -->
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Context-Aware Comment Display</h3>
+          <p>
+            The following examples demonstrate how ComVi aligns comments with contextually relevant moments.
+          </p>
+          <div class="notification is-info is-light" style="border-left: 4px solid hsl(204, 86%, 53%); border-radius: 6px;">
+            <span class="icon" style="margin-right: 6px;"><i class="fas fa-volume-up"></i></span>
+            <strong>Turn on the sound and watch the video along with the comments — notice how well the displayed comments match the currently playing scene. Isn't that delightful?</strong>
+          </div>
+          <p>
+          </p>
+          <!-- 6 example videos in 2x3 grid -->
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="publication-video">
+                <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                  <source src="./videos/results1-1.MP4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column">
+              <div class="publication-video">
+                <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                  <source src="./videos/results1-2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="publication-video">
+                <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                  <source src="./videos/results2.MP4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column">
+              <div class="publication-video">
+                <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                  <source src="./videos/results3.MP4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="publication-video">
+                <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                  <source src="./videos/results4.MP4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column">
+              <div class="publication-video">
+                <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                  <source src="./videos/results5.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result 2: Personalized Curation -->
+        <div class="content has-text-justified">
+          <h3 class="title is-4"><br><br>Personalized Comment Curation</h3>
+          <p>
+            On top of the automated comment curation, ComVi supports user-driven customization, offering the following features:
+          </p>
+
+          <h4 class="title is-5"><br>1. Maximum Number of Concurrently Displayed Comments</h4>
+          <p>
+            Viewers can control how many comments appear on screen at the same time.
+          </p>
+          <div class="publication-video">
+            <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+              <source src="./videos/comvi_curation.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <h4 class="title is-5"><br><br>2. Query-Based Comment Filtering</h4>
+          <p>
+            Viewers can enter a custom query to filter comments by natural language, showing only those that match their specific interests during playback.
+          </p>
+          <div class="publication-video">
+            <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+              <source src="./videos/comvi_query.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <h4 class="title is-5"><br><br>3. Reading Speed Adjustment</h4>
+          <p>
+            Viewers can adjust the comment display duration to match their personal reading speed.
+          </p>
+          <div class="publication-video">
+            <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+              <source src="./videos/comvi_reading_speed.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Comparison -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We compared comment-reading experiences in ComVi with conventional video interfaces: YouTube and Danmaku. In our user study (N=32),
+            ComVi achieved significantly higher engagement with lower physical demand than YouTube and lower mental
+            demand than Danmaku.
+          </p>
+        </div>
+
+        <div class="publication-video">
+          <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+            <source src="./videos/comvi_usertest.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Supplementary Video -->
+<section class="section" id="supplementary-video">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Supplementary Video</h2>
+        <div class="content has-text-justified">
+          <div class="publication-video">
+            <video controls playsinline style="width:100%; height:100%; position:absolute; top:0; left:0;">
+              <source src="./videos/comvi_supplementary_video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        We referred to the project page of <a href="https://nerfies.github.io/">Nerfies</a> when creating this page.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

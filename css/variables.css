@@ -1,0 +1,82 @@
+/* ============================================
+   CSS Custom Properties — Light & Dark Themes
+   ============================================ */
+
+:root {
+  /* --- Colors (Light) — Nature Green --- */
+  --color-bg: #f8faf8;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-accent: #15803d;
+  --color-accent-hover: #166534;
+  --color-accent-light: rgba(21, 128, 61, 0.08);
+  --color-border: #e2efe7;
+  --color-shadow: rgba(0, 0, 0, 0.06);
+  --color-shadow-hover: rgba(0, 0, 0, 0.12);
+  --color-nav-bg: rgba(248, 250, 248, 0.85);
+  --color-tag-bg: #ecfdf5;
+  --color-tag-text: #15803d;
+  --color-timeline-line: #d1e7d9;
+  --color-timeline-dot: #15803d;
+
+  /* --- Typography --- */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.6;
+
+  /* --- Spacing --- */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* --- Layout --- */
+  --max-width: 1100px;
+  --nav-height: 64px;
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* --- Dark Theme — Nature Green --- */
+[data-theme="dark"] {
+  --color-bg: #0c1210;
+  --color-bg-secondary: #141f1a;
+  --color-bg-card: #141f1a;
+  --color-text: #e8f0ec;
+  --color-text-secondary: #94a3b0;
+  --color-text-muted: #607068;
+  --color-accent: #4ade80;
+  --color-accent-hover: #6ee7a0;
+  --color-accent-light: rgba(74, 222, 128, 0.1);
+  --color-border: #1e3028;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-hover: rgba(0, 0, 0, 0.5);
+  --color-nav-bg: rgba(12, 18, 16, 0.85);
+  --color-tag-bg: rgba(74, 222, 128, 0.1);
+  --color-tag-text: #4ade80;
+  --color-timeline-line: #1e3028;
+  --color-timeline-dot: #4ade80;
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minsun Kim — HCI & Computer Vision researcher at KAIST. Publications, CV, and news.">
+  <meta name="google-site-verification" content="19mv9vSJh27Op2-h5f8pclu_WNbTJvDhOD5a4LlBQ_Y">
+  <meta name="author" content="Minsun Kim">
+  <meta name="keywords" content="Minsun Kim, KAIST, HCI, Computer Vision, Video Editing, CHI, Research, 김민선">
+  <link rel="canonical" href="https://minsunhappy.com/">
+
+  <!-- Open Graph (소셜 미디어 공유) -->
+  <meta property="og:title" content="Minsun Kim — HCI & Computer Vision Researcher">
+  <meta property="og:description" content="KAIST Graduate School of Culture Technology. Research on video editing technologies and HCI.">
+  <meta property="og:url" content="https://minsunhappy.com/">
+  <meta property="og:image" content="https://minsunhappy.com/assets/img/yoda.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@minsunkimhappy">
+  <meta name="twitter:title" content="Minsun Kim — HCI & Computer Vision Researcher">
+  <meta name="twitter:description" content="KAIST Graduate School of Culture Technology. Research on video editing technologies and HCI.">
+  <meta name="twitter:image" content="https://minsunhappy.com/assets/img/yoda.png">
+
+  <title>Minsun Kim</title>
+  <base href="/">
+  <link rel="icon" type="image/png" href="assets/img/grogu.png">
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Theme: apply before paint -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('homepage-theme');
+      if (t !== 'dark' && t !== 'light') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#about" class="nav__logo">Minsun Kim</a>
+
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about" class="nav__link active">About</a></li>
+        <li><a href="#publications" class="nav__link">Publications</a></li>
+        <li><a href="javascript:void(0)" class="nav__link" id="nav-cv-link">CV</a></li>
+        <li>
+          <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== ABOUT ==================== -->
+  <!-- ABOUT SECTION START -->
+  <section id="about" class="section">
+    <div class="about">
+      <div class="about__photo-wrapper animate-scale">
+        <img
+          src="assets/img/yoda.png"
+          alt="Minsun Kim profile photo"
+          class="about__photo"
+          width="200"
+          height="200"
+        >
+        <div class="about__social">
+          <a href="mailto:sunnykimhappy@gmail.com" class="about__social-link" aria-label="Email" title="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/minsun-kim-2395a5232" class="about__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://x.com/minsunkimhappy" class="about__social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="about__content animate-on-scroll">
+        <h1>Minsun Kim</h1>
+        <p class="about__subtitle">sunnykimhappy@gmail.com</p>
+
+        <div class="about__bio">
+          <p>
+            I am a researcher working on video editing and content technology, having recently completed my master's at the
+            <a href="https://ct.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">KAIST Graduate School of Culture Technology</a>,
+            <a href="https://vml.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Visual Media Lab</a>, advised by
+            <a href="https://vml.kaist.ac.kr/main/people/person/1" target="_blank" rel="noopener noreferrer">Prof. Junyong Noh</a>.
+            I'm currently interning at <a href="https://research.adobe.com/" target="_blank" rel="noopener noreferrer">Adobe</a> in San Jose,
+            working on video repurposing with VLLMs under
+            <a href="https://joonyoung-cv.github.io/" target="_blank" rel="noopener noreferrer">Dr. Joon-Young Lee</a>.
+          </p>
+        </div>
+
+        <div class="about__interests animate-on-scroll">
+          <h2 class="about__heading">Research Interests</h2>
+          <ul>
+            <li>Human-Computer Interaction, Computer Vision, Computer Graphics</li>
+            <li>More specifically: Content Technology, Video Editing &amp; Generation</li>
+            <li>
+              Recently exploring:
+              <ul>
+                <li>Automated video editing driven by viewer engagement data (e.g.,
+                  <a href="https://w-dlee.github.io/highlights" target="_blank" rel="noopener noreferrer">Most Replayed Data</a>,
+                  <a href="https://w-dlee.github.io/comvi" target="_blank" rel="noopener noreferrer">comments</a>)
+                </li>
+                <li>Agentic video editing</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about__vision animate-on-scroll">
+          <h2 class="about__heading">My Vision</h2>
+          <p>
+            With Sora, Veo, and the wave of generative video models, anyone can now conjure a clip from imagination.
+            Producing footage is no longer the hard part. What I find genuinely interesting — and increasingly critical —
+            is everything that happens after the clips exist: the cutting, the pacing, the structuring of fragments into
+            coherent narratives that hold together and are worth someone's time.
+          </p>
+          <p>
+            My goal is to research the technologies — be it Human-Computer Interaction, Computer Vision, or Computer Graphics —
+            that make this craft of editing and directing more accessible, more efficient, and ultimately better.
+            <strong>I want to live in a world with more high-quality content in it, and I'd like to help build the tools that get us there.</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- News alongside profile (left column, below photo) -->
+      <div class="about__news animate-on-scroll">
+        <h2 class="about__heading">News</h2>
+        <div class="about__news-list">
+          <div class="about__news-item">
+            <span class="about__news-date">Jan 2026</span>
+            <span class="about__news-text">Our paper has been <strong>conditionally accepted</strong> to <strong>CHI 2026</strong>! See you in Barcelona 🇪🇸</span>
+          </div>
+          <div class="about__news-item">
+            <span class="about__news-date">Jan 2026</span>
+            <span class="about__news-text">I'll be joining <strong>Adobe Research</strong> as a research intern advised by <a href="https://joonyoung-cv.github.io/" target="_blank" rel="noopener noreferrer">Joon-Young Lee</a> this summer ☀️ See you in San Jose! 🌴</span>
+          </div>
+          <div class="about__news-item">
+            <span class="about__news-date">Apr 2025</span>
+            <span class="about__news-text">Attending <strong>CHI 2025 in Yokohama, Japan</strong>! 🇯🇵</span>
+          </div>
+          <div class="about__news-item">
+            <span class="about__news-date">Jan 2025</span>
+            <span class="about__news-text">First paper <strong>conditionally accepted</strong> to <strong>CHI 2025</strong>!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT SECTION END -->
+
+  <!-- ==================== PUBLICATIONS ==================== -->
+  <!-- PUBLICATIONS SECTION START -->
+  <section id="publications" class="section">
+    <h2 class="section__title animate-on-scroll">Publications</h2>
+
+    <div class="pub-list">
+
+      <!-- Publication 1: ComVi (CHI 2026) -->
+      <article class="pub-card animate-on-scroll">
+        <img
+          src="assets/img/comvi.jpg"
+          alt="ComVi: Context-Aware Optimized Comment Display preview"
+          class="pub-card__img lightbox-trigger"
+          loading="lazy"
+        >
+        <div class="pub-card__content">
+          <div class="pub-card__badges">
+            <span class="pub-card__badge">HCI</span>
+            <span class="pub-card__badge">Video Editing</span>
+            <span class="pub-card__badge">Comments</span>
+            <span class="pub-card__badge">Visualization</span>
+            <span class="pub-card__badge">Video Interfaces</span>
+            <span class="pub-card__badge">Contextual Alignment</span>
+            <span class="pub-card__badge">Viewing Experience</span>
+          </div>
+          <h3 class="pub-card__title">ComVi: Context-Aware Optimized Comment Display in Video Playback</h3>
+          <p class="pub-card__authors"><strong>Minsun Kim</strong>, <a href="https://w-dlee.github.io/" target="_blank" rel="noopener noreferrer">Dawon Lee</a>*, Junyong Noh* <span class="pub-card__note">(*Co-corresponding authors)</span></p>
+          <p class="pub-card__venue">Proceedings of the CHI Conference on Human Factors in Computing Systems, 2026</p>
+          <div class="pub-card__links">
+            <a href="https://doi.org/10.1145/3772318.3791018" class="pub-card__link" target="_blank" rel="noopener noreferrer">DOI</a>
+            <a href="https://vml.kaist.ac.kr/assets/Contents/Publications/International/2026MinsunKim_CHI/2026MinsunKim_CHI.pdf" class="pub-card__link" target="_blank" rel="noopener noreferrer">PDF</a>
+            <a href="https://w-dlee.github.io/comvi" class="pub-card__link" target="_blank" rel="noopener noreferrer">Website</a>
+          </div>
+          <div class="pub-card__video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/qzZvagEZFgo"
+              title="ComVi demo"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-presentation"
+            ></iframe>
+          </div>
+        </div>
+      </article>
+
+      <!-- Publication 2: Highlight Videos (CHI 2025) -->
+      <article class="pub-card animate-on-scroll">
+        <img
+          src="assets/img/highlight.jpg"
+          alt="Generating Highlight Videos preview"
+          class="pub-card__img lightbox-trigger"
+          loading="lazy"
+        >
+        <div class="pub-card__content">
+          <div class="pub-card__badges">
+            <span class="pub-card__badge">HCI</span>
+            <span class="pub-card__badge">Video Editing</span>
+            <span class="pub-card__badge">Highlight Generation</span>
+            <span class="pub-card__badge">Video Summarization</span>
+            <span class="pub-card__badge">Image Processing</span>
+            <span class="pub-card__badge">Most Replayed Data</span>
+          </div>
+          <h3 class="pub-card__title">Generating Highlight Videos of a User-specified Length using Most Replayed Data</h3>
+          <p class="pub-card__authors"><strong>Minsun Kim</strong>, <a href="https://w-dlee.github.io/" target="_blank" rel="noopener noreferrer">Dawon Lee</a>*, Junyong Noh* <span class="pub-card__note">(*Co-corresponding authors)</span></p>
+          <p class="pub-card__venue">Proceedings of the CHI Conference on Human Factors in Computing Systems, 2025</p>
+          <div class="pub-card__links">
+            <a href="https://doi.org/10.1145/3706598.3713880" class="pub-card__link" target="_blank" rel="noopener noreferrer">DOI</a>
+            <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713880" class="pub-card__link" target="_blank" rel="noopener noreferrer">PDF</a>
+            <a href="https://w-dlee.github.io/highlights" class="pub-card__link" target="_blank" rel="noopener noreferrer">Website</a>
+          </div>
+          <div class="pub-card__video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/mxdnEN0Ihww"
+              title="Highlight Videos demo"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-presentation"
+            ></iframe>
+          </div>
+        </div>
+      </article>
+
+      <!-- Publication 3: Video Classifier (2024) -->
+      <article class="pub-card animate-on-scroll">
+        <img
+          src="assets/img/video_extra.jpg"
+          alt="Video classifier with adaptive blur network preview"
+          class="pub-card__img lightbox-trigger"
+          loading="lazy"
+        >
+        <div class="pub-card__content">
+          <div class="pub-card__badges">
+            <span class="pub-card__badge">Computer Vision</span>
+            <span class="pub-card__badge">Video Classifier</span>
+          </div>
+          <h3 class="pub-card__title">Video Classifier with Adaptive Blur Network to Determine Horizontally Extrapolatable Video Content</h3>
+          <p class="pub-card__authors"><strong>Minsun Kim</strong>, Changwook Seo, Hyun Ho Yun, Junyong Noh</p>
+          <p class="pub-card__venue"><span class="pub-card__badge pub-card__badge--award" style="font-style: normal;">Best Paper Award</span> Journal of the Korea Computer Graphics Society, Vol. 30, No. 3, pp. 99–107, 2024</p>
+          <div class="pub-card__links">
+            <a href="https://doi.org/10.15701/kcgs.2024.30.3.99" class="pub-card__link" target="_blank" rel="noopener noreferrer">DOI</a>
+            <a href="https://koreascience.kr/article/JAKO202424941304832.page" class="pub-card__link" target="_blank" rel="noopener noreferrer">Paper</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <!-- PUBLICATIONS SECTION END -->
+
+  <!-- CV Modal (triggered by nav) -->
+  <div class="cv-modal" id="cv-modal" role="dialog" aria-modal="true" aria-label="CV Viewer">
+    <div class="cv-modal__inner">
+      <button class="cv-modal__close" id="cv-modal-close" aria-label="Close">&times;</button>
+      <iframe src="CV_MinsunKim.pdf" class="cv-modal__iframe" title="Minsun Kim CV"></iframe>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>&copy; 2025–2026 Minsun Kim. All rights reserved.</p>
+    <p>Last updated: March 2026</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/lightbox.js"></script>
+
+</body>
+</html>
