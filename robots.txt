@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://minsunhappy.com/sitemap.xml
+Sitemap: https://minsunhappy.github.io/sitemap.xml
